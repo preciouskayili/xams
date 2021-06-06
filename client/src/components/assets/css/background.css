@@ -1,0 +1,11 @@
+.background {
+	background-image: url("../imgs/background.jpg");
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.card.background {
+	background-image: url("https://picsum.photos/1080/1080?blur=2");
+	background-position: 50% 50%;
+	background-size: cover;
+}

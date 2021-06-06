@@ -1,0 +1,38 @@
+{
+	"name": "xams",
+	"version": "1.0.0",
+	"description": "Open source and collaborative exam platform, social flash cards created by people for the people",
+	"main": "app.js",
+	"scripts": {
+		"client-install": "npm install --prefix client",
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"keywords": [
+		"Open",
+		"source",
+		"social",
+		"and",
+		"collaborative",
+		"exam",
+		"platform"
+	],
+	"author": "Precious Solomon Kayili",
+	"license": "MIT",
+	"dependencies": {
+		"concurrently": "^6.0.0",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"lodash": "^4.17.21",
+		"moment": "^2.29.1",
+		"mongoose": "^5.11.18",
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.7",
+		"react-countdown": "^2.3.1",
+		"react-pro-sidebar": "^0.6.0"
+	}
+}
