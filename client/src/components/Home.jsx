@@ -1,26 +1,28 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
 import ExamCard from "./ExamCard";
 import ErrorCard from "./ErrorCard";
 import Spinner from "./Spinner";
 import "./assets/css/background.css";
 import SideBar from "./Sidebar";
-const Home = ({isToggled}) => {
+const Home = ({ isToggled }) => {
   const [exams, setExams] = useState([]);
   const [searchExam, setSearchExam] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [errorDetails, setErrorDetails] = useState("");
   const [queryValue, setQueryValue] = useState("");
   const [query, setQuery] = useState("");
+  const [error, setError] = useState(false);
   useEffect(() => {
     fetch("http://localhost:9000/create")
       .then((res) => res.json())
       .then((data) => {
+        setError(false);
         setExams(data);
         setIsLoading(false);
       })
       .catch((error) => {
-        setError(`${error}`);
+        setErrorDetails(`${error}`);
+        setError(true);
         setIsLoading(false);
       });
   }, []);
@@ -34,19 +36,14 @@ const Home = ({isToggled}) => {
         console.log(searchExam);
       })
       .catch((err) => {
-        setError(`${error}`);
+        setError(`${err}`);
       });
   };
 
   return (
     <>
-      <div className="container-fluid">
-        <div className="row d-flex">
-          <div className="col-md-3">
-            <SideBar />
-          </div>
-
-          <div className={isToggled ? "col-md-9" : "col-md-12"}>
+      <SideBar />
+      {/* <div className={isToggled ? "col-md-9" : "col-md-12"}>
             <div>
               <h1>{!isLoading ? error : "Not yet"}</h1>
               <div
@@ -99,26 +96,24 @@ const Home = ({isToggled}) => {
               <div className="container-fluid">
                 <div className="row" style={{ marginTop: "-2rem" }}>
                   {isLoading === true ? <Spinner /> : ""}
-                  {error === "" ? (
+                  {!isLoading ? (
                     <>
-                      {!isLoading ? (
+                      {!error ? (
                         <ExamCard
                           exams={queryValue === "" ? exams : searchExam}
                           query={queryValue}
                         />
                       ) : (
-                        ""
+                        <>{!isLoading ? <ErrorCard error={errorDetails} /> : ""}</>
                       )}
                     </>
                   ) : (
-                    <>{!isLoading ? <ErrorCard error={error} /> : ""}</>
+                    ""
                   )}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </div> */}
     </>
   );
 };

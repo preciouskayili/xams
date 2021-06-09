@@ -1,36 +1,38 @@
 import React, { useState } from "react";
-// import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
+import { NavLink } from "react-router-dom";
+import "./assets/css/sidebar.css";
 import logo from "./assets/imgs/logo.png";
-
-import {
-  MenuItem,
-  ProSidebar,
-  SidebarHeader,
-  SubMenu,
-  SidebarContent,
-  SidebarFooter,
-  Menu,
-} from "react-pro-sidebar";
-import "react-pro-sidebar/dist/css/styles.css";
 
 const SideBar = () => {
   const [isToggled, setIsToggled] = useState(false);
   return (
     <>
       <Navbar isToggled={isToggled} setIsToggled={setIsToggled} />
-      <ProSidebar image="" className="h-100" style={{ zIndex: 99999, display: isToggled ? "block" : "none" }}>
-        <SidebarContent>
-          <Menu iconShape="circle">
-            <MenuItem icon={<i className="fas fa-gem" />}>Dashboard</MenuItem>
-            <SubMenu title="Components" icon={<i className="fas fa-heart"></i>}>
-              <MenuItem>Component 1</MenuItem>
-              <MenuItem>Component 2</MenuItem>
-            </SubMenu>
-          </Menu>
-        </SidebarContent>
-        <SidebarFooter className="text-center p-3">Copyright &copy; {new Date().getFullYear()} Xams</SidebarFooter>
-      </ProSidebar>
+
+      <div className={isToggled ? "sidenav active shadow" : "sidenav"}>
+        <img src={logo} className="logo mt-3" alt="Logo" />
+        <ul>
+          <li>
+            <NavLink className="link" to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink className="link" to="/">Examinations</NavLink>
+          </li>
+          <li>
+            <NavLink className="link" to="/team">My Team</NavLink>
+          </li>
+          <li>
+            <NavLink className="link" to="/profile">Profile</NavLink>
+          </li>
+          <li>
+            <NavLink className="link" to="/create">Create quiz</NavLink>
+          </li>
+          <li>
+            <NavLink className="link" to="/stats">My Records</NavLink>
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

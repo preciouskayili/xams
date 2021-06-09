@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
+import SideBar from './Sidebar';
 
 const Stats = () => {
-	return <Navbar />;
+	return <SideBar />;
 };
 
 export default Stats;

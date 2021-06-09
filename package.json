@@ -32,7 +32,6 @@
 		"mongoose": "^5.11.18",
 		"morgan": "^1.10.0",
 		"nodemon": "^2.0.7",
-		"react-countdown": "^2.3.1",
-		"react-pro-sidebar": "^0.6.0"
+		"react-countdown": "^2.3.1"
 	}
 }
