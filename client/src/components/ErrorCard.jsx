@@ -1,5 +1,4 @@
 import React from "react";
-
 const ErrorCard = ({ error }) => {
 	return (
 		<div className="container">

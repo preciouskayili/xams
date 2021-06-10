@@ -11,7 +11,10 @@ const SideBar = () => {
       <Navbar isToggled={isToggled} setIsToggled={setIsToggled} />
 
       <div className={isToggled ? "sidenav active shadow" : "sidenav"}>
-        <img src={logo} className="logo mt-3" alt="Logo" />
+        <div className="flex-center">
+          <img src={logo} className="logo mt-3" alt="Logo" />
+        </div>
+        <hr className="bg-white" />
         <ul>
           <li>
             <NavLink className="link" to="/">Home</NavLink>

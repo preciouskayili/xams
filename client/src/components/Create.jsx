@@ -251,18 +251,6 @@ const Create = () => {
 					{examQuestions.map((question) => (
 						<div key={uuidv4()}>
 							<QuestionsCard question={question} />
-							{/* <input
-								type="hidden"
-								name="title"
-								form="examForm"
-								value={question.title}
-							/>
-							<input
-								type="hidden"
-								name="category"
-								form="examForm"
-								value={question.category}
-							/> */}
 							<input
 								type="hidden"
 								name="question"

@@ -4,11 +4,11 @@
 	"description": "Open source and collaborative exam platform, social flash cards created by people for the people",
 	"main": "app.js",
 	"scripts": {
-		"client-install": "npm install --prefix client",
-		"start": "node server.js",
-		"server": "nodemon server.js",
-		"client": "npm start --prefix client",
-		"dev": "concurrently \"npm run server\" \"npm run client\""
+		"client-install": "yarn install --prefix client",
+		"start": "node app.js",
+		"server": "nodemon app.js",
+		"client": "yarn start --prefix client",
+		"dev": "concurrently \"yarn run server\" \"yarn run client\""
 	},
 	"keywords": [
 		"Open",

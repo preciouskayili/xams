@@ -1,0 +1,12 @@
+.search-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.search-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
