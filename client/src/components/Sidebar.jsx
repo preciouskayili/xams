@@ -12,49 +12,59 @@ const SideBar = () => {
       <Navbar isToggled={isToggled} setIsToggled={setIsToggled} />
 
       <div className={isToggled ? "sidenav active shadow" : "sidenav"}>
-        <div className="d-flex my-auto p-1 mt-3">
-          <img src={logo} className="logo" alt="Logo" />
-          <div className="my-auto ms-2 mt-2">
-            <h5 className="font-weight-bold text-white">Xams</h5>
+        <div className="mt-5">
+          <div className="d-flex my-auto p-1 mt-3">
+            <img src={logo} className="logo" alt="Logo" />
+            <div className="my-auto ms-2 mt-2">
+              <h5 className="font-weight-bold text-white">Xams</h5>
+            </div>
           </div>
+          <hr className="bg-white" />
+          <ul>
+            <li>
+              <NavLink
+                activeClassName="selected"
+                className="link selected"
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="selected" className="link" to="/">
+                Examinations
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="selected" className="link" to="/team">
+                My Team
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="selected"
+                className="link"
+                to="/profile"
+              >
+                Profile
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="selected" className="link" to="/create">
+                Create quiz
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="selected"
+                className="link"
+                to="/messages"
+              >
+                Messages
+              </NavLink>
+            </li>
+          </ul>
         </div>
-        <hr className="bg-white" />
-        <ul>
-          <li>
-            <NavLink
-              activeClassName="selected"
-              className="link selected"
-              to="/"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName="selected" className="link" to="/">
-              Examinations
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName="selected" className="link" to="/team">
-              My Team
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName="selected" className="link" to="/profile">
-              Profile
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName="selected" className="link" to="/create">
-              Create quiz
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName="selected" className="link" to="/messages">
-              Messages
-            </NavLink>
-          </li>
-        </ul>
       </div>
     </>
   );

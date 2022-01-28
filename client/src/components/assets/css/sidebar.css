@@ -36,8 +36,13 @@ ul li .link {
   padding: 8px 15px;
 }
 
-ul li .link:hover,
-ul li.link.selected {
+ul li .link:hover {
+  background: rgba(255, 255, 255, 0.11);
+  color: #eaecef;
+  border-left: 1px solid #ccc;
+}
+
+.selected {
   background: rgba(255, 255, 255, 0.11);
   color: #eaecef;
   border-left: 1px solid #ccc;

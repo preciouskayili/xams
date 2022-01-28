@@ -25,12 +25,12 @@ const Navbar = ({ isToggled, setIsToggled }) => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <button
-          className="btn btn-dark btn-floating"
+          className="btn btn-dark"
           onClick={() => setIsToggled(!isToggled)}
         >
           <i className={isToggled ? "fa fa-times" : "fa fa-bars"}></i>
+          Menu
         </button>
-        <div className="navbar-brand p-2 me-auto">Xams</div>
       </div>
     </nav>
   );

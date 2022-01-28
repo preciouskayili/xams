@@ -56,14 +56,14 @@ const Home = () => {
 
         <div className="container mb-3">
           <div className="col-md-6 mx-auto">
-            <div className="card p-3">
+            <div className="card bg-light p-3">
               <div className="input-group rounded-3">
                 <span className="input-group-text border-0" id="search-addon">
                   Search
                 </span>
                 <input
                   type="search"
-                  className="form-control border-0"
+                  className="form-control bg-light border-0"
                   placeholder="Search"
                   aria-label="Search"
                   aria-describedby="search-addon"
