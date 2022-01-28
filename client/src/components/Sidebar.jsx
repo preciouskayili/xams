@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import { NavLink } from "react-router-dom";
 import "./assets/css/sidebar.css";
@@ -6,6 +6,16 @@ import logo from "./assets/imgs/logo.png";
 
 const SideBar = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const [homeIsActive, setHomeIsActive] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line no-restricted-globals
+    if (location.pathname === "/") {
+      setHomeIsActive(true);
+    } else {
+      setHomeIsActive(false);
+    }
+  }, []);
 
   return (
     <>
@@ -23,15 +33,18 @@ const SideBar = () => {
           <ul>
             <li>
               <NavLink
-                activeClassName="selected"
-                className="link selected"
+                className={homeIsActive ? "link selected" : "link"}
                 to="/"
               >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="selected" className="link" to="/">
+              <NavLink
+                activeClassName="selected"
+                className="link"
+                to="/examination/1"
+              >
                 Examinations
               </NavLink>
             </li>

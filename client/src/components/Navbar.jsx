@@ -29,7 +29,7 @@ const Navbar = ({ isToggled, setIsToggled }) => {
           onClick={() => setIsToggled(!isToggled)}
         >
           <i className={isToggled ? "fa fa-times" : "fa fa-bars"}></i>
-          Menu
+          {isToggled ? "Close" : "Menu"}
         </button>
       </div>
     </nav>
