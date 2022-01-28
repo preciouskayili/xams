@@ -1,37 +1,39 @@
 {
-	"name": "xams",
-	"version": "1.0.0",
-	"description": "Open source and collaborative exam platform, social flash cards created by people for the people",
-	"main": "app.js",
-	"scripts": {
-		"client-install": "yarn install --prefix client",
-		"start": "node app.js",
-		"server": "nodemon app.js",
-		"client": "yarn start --prefix client",
-		"dev": "concurrently \"yarn run server\" \"yarn run client\""
-	},
-	"keywords": [
-		"Open",
-		"source",
-		"social",
-		"and",
-		"collaborative",
-		"exam",
-		"platform"
-	],
-	"author": "Precious Solomon Kayili",
-	"license": "MIT",
-	"dependencies": {
-		"concurrently": "^6.0.0",
-		"cors": "^2.8.5",
-		"dotenv": "^8.2.0",
-		"ejs": "^3.1.6",
-		"express": "^4.17.1",
-		"lodash": "^4.17.21",
-		"moment": "^2.29.1",
-		"mongoose": "^5.11.18",
-		"morgan": "^1.10.0",
-		"nodemon": "^2.0.7",
-		"react-countdown": "^2.3.1"
-	}
+  "name": "xams",
+  "version": "1.0.0",
+  "description": "Open source and collaborative exam platform, social flash cards created by people for the people",
+  "main": "app.js",
+  "scripts": {
+    "client-install": "yarn add --prefix client",
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "cd client && yarn start --prefix client",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+  },
+  "keywords": [
+    "Open",
+    "source",
+    "social",
+    "and",
+    "collaborative",
+    "exam",
+    "platform"
+  ],
+  "author": "Precious Solomon Kayili",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "axios-retry": "^3.2.4",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.18",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "react-countdown": "^2.3.1"
+  }
 }

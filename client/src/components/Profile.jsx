@@ -1,8 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
 import croods from "./croods.png";
 import SideBar from "./Sidebar";
-import "./assets/css/background.css";
 const Profile = () => {
   return (
     <div>

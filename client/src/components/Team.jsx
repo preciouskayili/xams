@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
 import SideBar from "./Sidebar";
 import img from "./croods.png";
+import { NavLink } from "react-router-dom";
 
 const Team = () => {
   return (
@@ -23,17 +23,17 @@ const Team = () => {
             />
             <p
               className="mt-auto"
-              style={{ marginLeft: ".95rem", fontWeight: 300 }}
+              style={{ marginLeft: ".95rem", fontWeight: 500 }}
             >
               Precious Solomon
             </p>
-            <a
-              href="/"
+            <NavLink
+              to="/"
               style={{ position: "absolute", right: "2%", top: "30%" }}
               className="btn btn-danger btn-sm rounded ml-auto p-2"
             >
               <i className="fas fa-user-times"></i>
-            </a>
+            </NavLink>
           </div>
         </div>
 
@@ -48,17 +48,17 @@ const Team = () => {
             />
             <p
               className="mt-auto"
-              style={{ marginLeft: ".95rem", fontWeight: 300 }}
+              style={{ marginLeft: ".95rem", fontWeight: 500 }}
             >
               Precious Solomon Kayili
             </p>
-            <a
-              href="/"
+            <NavLink
+              to="/"
               style={{ position: "absolute", right: "2%", top: "30%" }}
               className="btn btn-danger btn-sm rounded ml-auto p-2"
             >
               <i className="fas fa-user-times"></i>
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

@@ -6,33 +6,53 @@ import logo from "./assets/imgs/logo.png";
 
 const SideBar = () => {
   const [isToggled, setIsToggled] = useState(false);
+
   return (
     <>
       <Navbar isToggled={isToggled} setIsToggled={setIsToggled} />
 
       <div className={isToggled ? "sidenav active shadow" : "sidenav"}>
-        <div className="flex-center">
-          <img src={logo} className="logo mt-3" alt="Logo" />
+        <div className="d-flex my-auto p-1 mt-3">
+          <img src={logo} className="logo" alt="Logo" />
+          <div className="my-auto ms-2 mt-2">
+            <h5 className="font-weight-bold text-white">Xams</h5>
+          </div>
         </div>
         <hr className="bg-white" />
         <ul>
           <li>
-            <NavLink className="link" to="/">Home</NavLink>
+            <NavLink
+              activeClassName="selected"
+              className="link selected"
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink className="link" to="/">Examinations</NavLink>
+            <NavLink activeClassName="selected" className="link" to="/">
+              Examinations
+            </NavLink>
           </li>
           <li>
-            <NavLink className="link" to="/team">My Team</NavLink>
+            <NavLink activeClassName="selected" className="link" to="/team">
+              My Team
+            </NavLink>
           </li>
           <li>
-            <NavLink className="link" to="/profile">Profile</NavLink>
+            <NavLink activeClassName="selected" className="link" to="/profile">
+              Profile
+            </NavLink>
           </li>
           <li>
-            <NavLink className="link" to="/create">Create quiz</NavLink>
+            <NavLink activeClassName="selected" className="link" to="/create">
+              Create quiz
+            </NavLink>
           </li>
           <li>
-            <NavLink className="link" to="/stats">My Records</NavLink>
+            <NavLink activeClassName="selected" className="link" to="/messages">
+              Messages
+            </NavLink>
           </li>
         </ul>
       </div>
