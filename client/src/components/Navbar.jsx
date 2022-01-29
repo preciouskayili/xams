@@ -28,8 +28,10 @@ const Navbar = ({ isToggled, setIsToggled }) => {
           className="btn btn-dark"
           onClick={() => setIsToggled(!isToggled)}
         >
-          <i className={isToggled ? "fa fa-times" : "fa fa-bars"}></i>
-          {isToggled ? "Close" : "Menu"}
+          <i
+            className={isToggled ? "fa fa-times btn-danger" : "fa fa-bars"}
+          ></i>
+          {isToggled ? "  Close" : "  Menu"}
         </button>
       </div>
     </nav>

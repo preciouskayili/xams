@@ -49,7 +49,7 @@ const Home = () => {
               Community
             </h1>
             <p className="text-white text-center subtitle">
-              Search for questions made by students for students
+              Search questions made by scholars for scholars
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ const Home = () => {
             <div className="card bg-light p-3">
               <div className="input-group rounded-3">
                 <span className="input-group-text border-0" id="search-addon">
-                  Search
+                  <i className="fa fa-search"></i>
                 </span>
                 <input
                   type="search"
